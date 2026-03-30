@@ -1,0 +1,11 @@
+[build]
+  # The directory to publish is the current directory since our index.html is here
+  publish = "."
+
+[[headers]]
+  # Basic security headers for Netlify
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
