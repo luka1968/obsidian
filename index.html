@@ -117,6 +117,18 @@
                         </div>
                     </div>
                     
+                    <div class="relative">
+                        <select id="billing_cycle" class="appearance-none bg-gray-50 border border-gray-300 text-gfnavy font-semibold text-sm rounded focus:ring-gforange focus:border-gforange block w-full px-5 py-3.5 pr-10 cursor-pointer">
+                            <option value="annual" selected="selected">Annual</option>
+                            <option value="lifetime">Lifetime</option>
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gfnavy">
+                            <i class="fa-solid fa-chevron-down text-xs"></i>
+                        </div>
+                    </div>
+                    
+                    <div id="price-display" class="text-2xl font-extrabold text-gfnavy mx-2 whitespace-nowrap">$79.99</div>
+
                     <button id="purchase" class="bg-gfnavy hover:bg-gray-800 text-white font-bold py-3.5 px-8 rounded transition-colors text-base shadow-lg hover:shadow-xl w-full sm:w-auto">
                         Buy Now
                     </button>
@@ -316,6 +328,21 @@
     <!-- Freemius Checkout Scripts -->
     <script type="text/javascript" src="https://checkout.freemius.com/js/v1/"></script>
     <script type="text/javascript">
+        const premiumPricing = {
+            '1': { 'annual': '$79.99', 'lifetime': '$299.99' },
+            '2': { 'annual': '$119.90', 'lifetime': '$499.99' }
+        };
+
+        const updatePriceDisplay = () => {
+            const licenses = document.getElementById('licenses').value;
+            const cycle = document.getElementById('billing_cycle').value;
+            const text = premiumPricing[licenses][cycle];
+            document.getElementById('price-display').innerText = text;
+        };
+
+        document.getElementById('licenses').addEventListener('change', updatePriceDisplay);
+        document.getElementById('billing_cycle').addEventListener('change', updatePriceDisplay);
+
         // Premium Handler
         const premiumHandler = new FS.Checkout({
             product_id: '26187',
@@ -334,6 +361,7 @@
             premiumHandler.open({
                 name: 'Subscriptions Payment Recovery for WooCommerce',
                 licenses: document.getElementById('licenses').value,
+                billing_cycle: document.getElementById('billing_cycle').value,
                 purchaseCompleted: (response) => {
                     btn.innerText = 'Purchased!';
                     btn.style.background = '#10b981'; 
