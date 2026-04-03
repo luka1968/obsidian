@@ -1,5 +1,7 @@
 [build]
-  # The directory to publish is the current directory since our index.html is here
+  # When deployed on Netlify, run Tailwind CSS CLI to generate the static optimized CSS file
+  command = "npm install -D tailwindcss && npx tailwindcss -i ./input.css -o ./output.css --minify"
+  # Publish the entire directory
   publish = "."
 
 [[headers]]

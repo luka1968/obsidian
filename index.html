@@ -4,61 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subscriptions Payment Recovery for WooCommerce</title>
-    <!-- Use Tailwind CSS for Gravity Forms style replication -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome and Google Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Overpass', 'sans-serif'], // Gravity Forms uses a font similar to Overpass
-                        inter: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        gfnavy: '#0d223f',
-                        gforange: '#f25922',
-                        gflightblue: '#d7eff4',
-                        gfblue: '#00afc7',
-                        gftext: '#3b4351'
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        .hero-bg-shapes {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 50%;
-            height: 100%;
-            z-index: -1;
-            overflow: hidden;
-        }
-        .hero-shape-1 {
-            position: absolute;
-            top: -10%;
-            right: -20%;
-            width: 800px;
-            height: 800px;
-            background: #d7eff4;
-            border-radius: 50%;
-            z-index: -2;
-        }
-        .hero-shape-2 {
-            position: absolute;
-            bottom: -30%;
-            right: -10%;
-            width: 600px;
-            height: 600px;
-            background: #0d223f;
-            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-            z-index: -1;
-            transform: rotate(-15deg);
-        }
-    </style>
+    
+    <!-- Compiled Tailwind CSS for Production -->
+    <link href="output.css" rel="stylesheet">
 </head>
 <body class="bg-white text-gftext font-sans antialiased overflow-x-hidden">
 
