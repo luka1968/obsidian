@@ -1,0 +1,4 @@
+[build]
+  base = "."
+  publish = "."
+  command = "" # 静态页面无需编译，Tailwind CDN 可直接渲染

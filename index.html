@@ -8,93 +8,220 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Compiled Tailwind CSS for Production -->
+    <!-- Tailwind CSS via CDN for instant rendering -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+                sans: ['Overpass', 'sans-serif'],
+                inter: ['Inter', 'sans-serif'],
+            },
+            colors: {
+                gfnavy: '#0d223f',
+                gforange: '#f25922',
+                gflightblue: '#d7eff4',
+                gfblue: '#00afc7',
+                gftext: '#3b4351'
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Fallback compiled CSS if built later -->
     <link href="output.css" rel="stylesheet">
 </head>
 <body class="bg-white text-gftext font-sans antialiased overflow-x-hidden">
 
-    <!-- Navbar styling matching Gravity Forms -->
-    <nav class="flex items-center justify-between px-8 py-5 border-b border-gray-100 bg-white sticky top-0 z-50">
+    <!-- Navbar styling matching Workfern Reference -->
+    <nav class="flex items-center justify-between px-8 lg:px-16 py-6 bg-white relative z-50">
         <div class="flex items-center gap-2 cursor-pointer">
-            <div class="w-8 h-8 rounded-lg bg-gforange flex items-center justify-center text-white font-bold text-xl rounded-tr-sm">
+            <div class="w-8 h-8 rounded-md bg-gforange flex items-center justify-center text-white font-bold text-xl">
                 W
             </div>
-            <span class="text-gfnavy font-extrabold text-2xl tracking-tight">WORKFERN</span>
+            <span class="text-gfnavy font-black text-2xl tracking-tight uppercase">WORKFERN</span>
         </div>
         
-        <div class="hidden lg:flex items-center gap-8 font-semibold text-gfnavy text-[15px]">
-            <a href="#" class="hover:text-gforange transition-colors flex items-center gap-1">Features</a>
-            <a href="#" class="hover:text-gforange transition-colors flex items-center gap-1">Privacy</a>
-            <a href="#" class="hover:text-gforange transition-colors">Support</a>
+        <div class="hidden lg:flex items-center gap-8 font-bold text-gray-800 text-[15px]">
+            <a href="#" class="hover:text-gforange transition-colors flex items-center gap-1">Pricing <i class="fa-solid fa-chevron-down text-[10px]"></i></a>
+            <a href="#" class="hover:text-gforange transition-colors flex items-center gap-1">Product <i class="fa-solid fa-chevron-down text-[10px]"></i></a>
+            <a href="#" class="hover:text-gforange transition-colors">Add-Ons</a>
+            <a href="#" class="hover:text-gforange transition-colors flex items-center gap-1">Help <i class="fa-solid fa-chevron-down text-[10px]"></i></a>
+            <a href="#" class="hover:text-gforange transition-colors ml-4">Login</a>
         </div>
 
         <div class="flex items-center gap-6">
-            <button class="bg-gforange hover:bg-[#d84a18] text-white font-bold py-3 px-6 rounded transition-colors text-[15px]">
-                Add to Chrome
+            <button class="text-gray-700 hover:text-gforange transition-colors text-lg">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <button class="bg-gforange hover:bg-[#d84a18] text-white font-bold py-3 px-8 rounded transition-colors text-[15px]">
+                Get Started
             </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <div class="relative w-full min-h-[75vh] flex items-center px-8 lg:px-20 py-16">
-        <!-- Abstract Shapes mimicking Gravity Forms right side background -->
-        <div class="hero-bg-shapes hidden lg:block">
-            <div class="hero-shape-1"></div>
-            <div class="hero-shape-2"></div>
+    <div class="relative w-full min-h-[85vh] flex items-center px-8 lg:px-16 py-12 overflow-hidden bg-white">
+        <!-- Abstract Shapes mimicking Workfern background -->
+        <div class="absolute right-0 top-0 w-full h-full pointer-events-none z-0">
+            <!-- Light blue shape top behind window -->
+            <div class="absolute top-[-10%] right-[15%] w-[800px] h-[800px] bg-[#e6f7fa] rounded-full opacity-70 blur-[60px]"></div>
+            <!-- Dark navy huge circle bottom right -->
+            <div class="absolute -bottom-64 -right-48 w-[800px] h-[800px] bg-gfnavy rounded-full shadow-2xl"></div>
         </div>
 
-        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center w-full gap-16 relative z-10">
+        <div class="max-w-[1400px] mx-auto flex flex-col lg:flex-row items-center justify-between w-full gap-16 relative z-10">
             <!-- Left Copy Area -->
-            <div class="w-full lg:w-6/12 flex flex-col gap-6">
-                <h1 class="text-[3.5rem] lg:text-[4.5rem] leading-[1.05] font-extrabold text-gfnavy tracking-tight">
-                    Web Highlighter for Obsidian
+            <div class="w-full lg:w-5/12 flex flex-col pt-8 lg:pt-0">
+                <h1 class="text-[4.5rem] lg:text-[5.5rem] leading-[1.05] font-black text-gfnavy tracking-tight mb-8 font-sans">
+                    Web Highlighter<br>fueled by<br>Workfern.
                 </h1>
-                <p class="text-xl text-gray-700 font-medium leading-relaxed mt-2 max-w-lg">
-                    A local-first, highly robust web highlighting extension designed specifically for <span class="text-gfnavy font-bold">seamless integration with Obsidian.</span>
+
+                <p class="text-[1.125rem] text-gray-600 leading-relaxed max-w-md mb-10 font-bold">
+                    The most powerful solution for capturing web content and expanding your knowledge. <span class="text-gfnavy font-black">All in Obsidian.</span>
                 </p>
 
-                <p class="text-lg text-gray-600 leading-relaxed max-w-lg">
-                    Capture information across the web without breaking your reading flow. Designed with modern web apps in mind, it ensures your highlights survive page reloads and dynamic content changes, while making it incredibly easy to export your research directly into your Obsidian vault.
-                </p>
-
-                <div class="mt-4 flex gap-4">
-                    <button class="bg-gfnavy hover:bg-gray-800 text-white font-bold py-3.5 px-8 rounded transition-colors text-base shadow-lg hover:shadow-xl">
-                        <i class="fa-brands fa-chrome mr-2"></i> Add to Chrome
+                <!-- Pricing / Download Row mimicking the screenshot -->
+                <div class="flex items-center gap-4 mb-4">
+                    <!-- Dropdowns -->
+                    <div class="flex gap-2">
+                        <div class="w-14 h-14 border border-gray-200 rounded-md flex items-center justify-center bg-gray-50/50 cursor-pointer hover:border-gray-300 transition shadow-sm">
+                             <i class="fa-solid fa-chevron-down text-gray-500 text-xs"></i>
+                        </div>
+                        <div class="w-14 h-14 border border-gray-200 rounded-md flex items-center justify-center bg-gray-50/50 cursor-pointer hover:border-gray-300 transition shadow-sm">
+                             <i class="fa-solid fa-chevron-down text-gray-500 text-xs"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="text-3xl font-black text-gfnavy ml-3 mr-3 font-sans">FREE</div>
+                    
+                    <button class="bg-gfnavy hover:bg-[#0a1a30] text-white font-bold h-14 px-8 rounded-md shadow-xl transition-colors text-[15px] whitespace-nowrap">
+                        Add to Chrome
                     </button>
-                    <button class="bg-white border border-gray-300 text-gfnavy hover:border-gray-400 font-bold py-3.5 px-6 rounded transition-colors text-base flex items-center gap-2">
-                        <i class="fa-brands fa-github text-gfnavy"></i> View Source
+                    
+                    <button class="bg-white border text-center border-gray-200 shadow-sm text-gfnavy hover:border-gray-300 hover:bg-gray-50 font-bold h-14 px-5 rounded-md transition-colors text-[13px] flex flex-col items-center justify-center gap-0.5 leading-none">
+                        <div class="flex items-center gap-1.5">
+                            <i class="fa-solid fa-download text-gfblue"></i> Download
+                        </div>
+                        <span>Free</span>
                     </button>
+                </div>
+                <div class="text-xs text-gray-400 font-medium tracking-wide">
+                    Secure local-first extension. Privacy guaranteed.
                 </div>
             </div>
 
-            <!-- Right Area (Placeholder illustration/Icon) -->
-            <div class="w-full lg:w-6/12 relative mt-12 lg:mt-0 flex justify-center hidden md:flex">
-                 <div class="w-full max-w-md bg-white rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.2)] border border-gray-200 overflow-hidden transform rotate-y-[-5deg] rotate-x-[5deg] scale-105 origin-center transition-transform duration-700 hover:rotate-y-0 hover:rotate-x-0 hover:scale-100">
-                    <div class="bg-gray-100 border-b border-gray-200 flex items-center px-4 py-2 gap-2">
-                         <div class="w-3 h-3 rounded-full bg-red-400"></div>
-                         <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
-                         <div class="w-3 h-3 rounded-full bg-green-400"></div>
-                         <div class="flex-1 bg-white rounded h-5 mx-4 border border-gray-200 text-[10px] text-gray-400 px-2 flex items-center">obsidian.workfern.com</div>
+            <!-- Right Area (Full Wikipedia + Extension Mockup replacing the image) -->
+            <div class="w-full lg:w-7/12 relative mt-16 lg:mt-0 flex justify-end">
+                <div class="relative w-full max-w-[850px] bg-white rounded-[1.25rem] shadow-[0_30px_70px_rgba(13,34,63,0.18)] border border-gray-100/50 overflow-hidden z-10 lg:translate-x-12">
+                    <!-- Browser-like header mimicking the screenshot top bar -->
+                    <div class="bg-[#e8eaed] flex items-center px-4 py-2 border-b border-gray-300 gap-4">
+                         <div class="flex gap-2.5">
+                             <div class="w-3.5 h-3.5 rounded-full bg-[#ef4444]"></div>
+                             <div class="w-3.5 h-3.5 rounded-full bg-[#facc15]"></div>
+                             <div class="w-3.5 h-3.5 rounded-full bg-[#22c55e]"></div>
+                         </div>
+                         <div class="flex-1 bg-white rounded-full h-8 px-4 flex items-center text-[13px] text-gray-500 font-medium font-sans gap-2 shadow-sm border border-gray-200">
+                             <i class="fa-solid fa-lock text-[#666]"></i> en.wikipedia.org/wiki/Donald_Trump
+                         </div>
                     </div>
-                    <div class="p-8 pb-12 text-gray-700 text-sm leading-relaxed relative">
-                        <h2 class="text-2xl font-bold mb-4 text-gfnavy text-left">Designing for the Web</h2>
-                        <p class="mb-4">
-                            When building modern tools, understanding how users interact with content is <span class="bg-yellow-200 cursor-pointer relative group px-1 rounded shadow-sm">critical for success.
-                                <!-- Tooltip mimic -->
-                                <div class="absolute w-36 bottom-full left-1/2 transform -translate-x-1/2 mb-1 bg-gray-800 text-white text-xs rounded py-1 px-2 text-center opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-50">
-                                    Saved to Obsidian
+                    
+                    <!-- Material HTML Mockup Container -->
+                    <div class="relative w-full h-[540px] bg-white flex font-sans overflow-hidden">
+                        <!-- Wikipedia Sidebar Mock -->
+                        <div class="w-56 bg-[#f8f9fa] border-r border-[#a2a9b1] h-full hidden md:block pt-5 text-[13px] text-[#202122] overflow-hidden">
+                             <div class="px-5 font-bold mb-2">Contents <span class="bg-white border border-gray-300 px-1 text-[10px] ml-2 font-normal rounded cursor-pointer text-[#3366cc]">hide</span></div>
+                             <div class="px-5 py-1 font-bold">(Top)</div>
+                             <div class="px-5 py-1 text-[#3366cc]">Early life and education</div>
+                             <div class="px-5 py-1 font-bold mt-1 text-[#222]"><i class="fa-solid fa-chevron-right text-[10px] text-gray-400 mr-1"></i> Business career</div>
+                             <div class="px-5 py-1 text-[#3366cc]">Media career</div>
+                             <div class="px-5 py-1 text-[#3366cc]">Early political aspirations</div>
+                             <div class="px-5 py-1 text-[#3366cc] leading-tight mt-1">2016 presidential<br>election</div>
+                             <div class="px-5 py-1 font-bold mt-1 text-[#222]"><i class="fa-solid fa-chevron-right text-[10px] text-gray-400 mr-1"></i> First presidency</div>
+                        </div>
+
+                        <!-- Wikipedia main content background -->
+                        <div class="flex-1 h-full p-6 lg:p-10 bg-white relative text-left">
+                            <h2 class="text-[32px] font-serif font-medium border-b border-[#a2a9b1] pb-1 mb-5 text-black">Donald Trump</h2>
+                            <p class="text-[14px] leading-[1.65] mb-4 text-[#202122] font-sans">
+                                During his first presidency, Trump imposed a <span class="text-[#3366cc] cursor-pointer hover:underline">travel ban</span> on seven Muslim-majority countries, expanded the <span class="text-[#3366cc] cursor-pointer hover:underline">Mexico–United States border wall</span>, and enforced a <span class="text-[#3366cc] cursor-pointer hover:underline">family separation policy</span> on the border. He rolled back environmental and business regulations, signed the <span class="text-[#3366cc] cursor-pointer hover:underline">Tax Cuts and Jobs Act</span>, and appointed three Supreme Court justices. He withdrew the U.S. from agreements on climate, trade, and Iran's nuclear program, and started a <span class="text-[#3366cc] cursor-pointer hover:underline">trade war with China</span>. In response to the <span class="text-[#3366cc] cursor-pointer hover:underline">COVID-19 pandemic</span> <mark class="bg-[#fef08a] px-0.5 relative cursor-pointer inline">in 2020, he downplayed its severity</mark>, contradicted health officials, and signed the <span class="text-[#3366cc] cursor-pointer">CARES Act</span>. After losing the <span class="text-[#3366cc] cursor-pointer hover:underline">2020 presidential election</span> to <span class="text-[#3366cc] cursor-pointer hover:underline">Joe Biden</span>, Trump attempted to overturn the result, <mark class="bg-[#bfdbfe] px-0.5 relative cursor-pointer inline">culminating in the January 6 Capitol attack</mark> in 2021. He was <span class="text-[#3366cc] cursor-pointer hover:underline">impeached in 2019</span> for abuse of power and obstruction of Congress, and <span class="text-[#3366cc] cursor-pointer hover:underline">in 2021</span> for incitement of insurrection; <mark class="bg-[#fbcfe8] px-0.5 relative cursor-pointer inline">the Senate acquitted him both times</mark>.
+                            </p>
+                            
+                            <p class="text-[14px] leading-[1.65] mb-4 text-[#202122] font-sans pr-16 block px-1">
+                                In 2023, <mark class="bg-[#fef08a] px-0.5 relative cursor-pointer inline">Trump was found liable in civil</mark> cases <span class="text-[#3366cc] cursor-pointer hover:underline">for sexual abuse and defamation</span> and <span class="text-[#3366cc] cursor-pointer hover:underline">for business fraud</span>. He was found guilty in 34 counts of falsifying business records in 2024, making him the first U.S. president convicted of a felony.
+                            </p>
+                            <!-- Gradient overlay to fade bottom out -->
+                            <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none z-10"></div>
+                        </div>
+
+                        <!-- The Floating Extension Panel Mockup (THE MATERIAL) -->
+                        <div class="absolute right-[20px] top-[40px] w-[340px] bg-[#222222] rounded-[10px] shadow-[0_30px_60px_rgba(0,0,0,0.6)] border border-[#444] overflow-hidden flex flex-col font-sans z-30 transform hover:scale-[1.02] transition-transform duration-300">
+                            <!-- Header -->
+                            <div class="bg-[#facc15] px-4 py-3 relative">
+                                <div class="flex items-center gap-2 font-bold text-black text-[16px]">
+                                    <i class="fa-solid fa-pen text-red-600"></i> Web Highlighter for Obsidian
                                 </div>
-                            </span>
-                        </p>
-                        <p>
-                            Many traditional clippers fail because they rely on fragile DOM structures, but our <span class="bg-yellow-200 px-1 rounded shadow-sm">W3C Text Quote Selector</span> approach ensures resilience against page updates.
-                        </p>
-                        
-                        <!-- Floating Toolbar mock -->
-                        <div class="absolute top-[35%] left-[60%] bg-white rounded-lg shadow-xl border border-gray-200 flex items-center p-1 gap-1 transform translate-x-[-50%] translate-y-[-50%] scale-90 z-40">
-                            <div class="w-8 h-8 rounded hover:bg-gray-100 flex items-center justify-center cursor-pointer text-yellow-500"><i class="fa-solid fa-highlighter"></i></div>
-                            <div class="w-8 h-8 rounded hover:bg-gray-100 flex items-center justify-center cursor-pointer text-gray-600"><i class="fa-solid fa-note-sticky"></i></div>
-                            <div class="w-8 h-8 rounded hover:bg-gray-100 flex items-center justify-center cursor-pointer text-gray-600"><i class="fa-solid fa-copy"></i></div>
+                                <div class="text-[12px] text-gray-800 font-medium mt-0.5">Highlights for this page</div>
+                            </div>
+                            <!-- Status -->
+                            <div class="bg-[#2a2a2a] px-4 py-2.5 flex items-center justify-between border-b border-[#3c3c3c]">
+                                <div class="flex items-center gap-2.5">
+                                    <span class="bg-[#555] text-white text-[10px] font-bold px-1.5 py-0.5 rounded leading-none">FREE</span>
+                                    <span class="text-[#888] text-[11px]">8/8 free uses left</span>
+                                </div>
+                                <button class="border border-[#facc15] text-[#facc15] text-[11px] font-bold px-3 py-1 rounded bg-transparent hover:bg-[#facc15] hover:text-black transition uppercase">Upgrade</button>
+                            </div>
+                            <!-- Cards -->
+                            <div class="px-4 py-4 flex flex-col gap-3 h-[250px] overflow-y-auto overflow-x-hidden" style="scrollbar-width: thin; scrollbar-color: #555 #222;">
+                                <!-- Card 1 -->
+                                <div class="bg-[#2a2a2a] border-l-[3.5px] border-[#eab308] rounded-r-md p-3 relative group focus-within:ring-1 focus-within:ring-[#eab308] transition-shadow">
+                                    <div class="w-3 h-3 rounded-[3px] bg-[#eab308] absolute left-3 top-3.5 opacity-80"></div>
+                                    <div class="text-[#e5e7eb] text-[13px] leading-snug ml-7 pr-6">in 2020, he downplayed its severity</div>
+                                    <div class="text-[#666] text-[10px] mt-2 ml-7 font-mono">2026/2/27 09:39:56</div>
+                                    <i class="fa-regular fa-trash-can absolute right-3 bottom-3 text-[#555] hover:text-[#aaa] cursor-pointer text-[13px] transition-colors"></i>
+                                </div>
+                                <!-- Card 2 -->
+                                <div class="bg-[#2a2a2a] border-l-[3.5px] border-[#3b82f6] rounded-r-md p-3 relative group transition-shadow">
+                                    <div class="w-3 h-3 rounded-[3px] bg-[#3b82f6] absolute left-3 top-3.5 opacity-80"></div>
+                                    <div class="text-[#e5e7eb] text-[13px] leading-snug ml-7 pr-6">culminating in the January 6 Capitol attack</div>
+                                    <div class="text-[#666] text-[10px] mt-2 ml-7 font-mono">2026/2/27 09:40:01</div>
+                                    <i class="fa-regular fa-trash-can absolute right-3 bottom-3 text-[#555] hover:text-[#aaa] cursor-pointer text-[13px] transition-colors"></i>
+                                </div>
+                                <!-- Card 3 -->
+                                <div class="bg-[#2a2a2a] border-l-[3.5px] border-[#ec4899] rounded-r-md p-3 relative group transition-shadow">
+                                    <div class="w-3 h-3 rounded-[3px] bg-[#ec4899] absolute left-3 top-3.5 opacity-80"></div>
+                                    <div class="text-[#e5e7eb] text-[13px] leading-snug ml-7 pr-6">the Senate acquitted him both times</div>
+                                    <div class="text-[#666] text-[10px] mt-2 ml-7 font-mono">2026/2/27 09:40:06</div>
+                                    <i class="fa-regular fa-trash-can absolute right-3 bottom-3 text-[#555] hover:text-[#aaa] cursor-pointer text-[13px] transition-colors"></i>
+                                </div>
+                                <!-- Card 4 (Note) -->
+                                <div class="bg-[#2a2a2a] border-l-[3.5px] border-[#eab308] rounded-r-md p-3 pb-4 relative group transition-shadow">
+                                    <div class="w-3 h-3 rounded-[3px] bg-[#eab308] absolute left-3 top-3.5 opacity-80"></div>
+                                    <div class="text-[#e5e7eb] text-[13px] leading-snug ml-7 pr-6">Trump was found liable in civil</div>
+                                    <div class="text-[#666] text-[10px] mt-2 ml-7 font-mono">2026/2/27 09:40:10</div>
+                                    <div class="absolute right-3 bottom-2 flex gap-3 border border-[#444] rounded px-1.5 py-0.5 bg-[#333]">
+                                        <div class="text-[#9ca3af] text-[10px] flex items-center gap-1.5"><i class="fa-solid fa-note-sticky text-[#d1d5db]"></i> bbbbbss</div>
+                                    </div>
+                                    <i class="fa-regular fa-trash-can absolute right-3 bottom-[42px] text-[#555] hover:text-[#aaa] cursor-pointer text-[13px] transition-colors"></i>
+                                </div>
+                            </div>
+                            <!-- Bottom Actions -->
+                            <div class="bg-[#2a2a2a] p-4 flex flex-col gap-2.5 border-t border-[#3c3c3c]">
+                                <div class="flex">
+                                    <button class="bg-[#3b3b3b] hover:bg-[#4d4d4d] border border-[#555] text-[#e5e7eb] text-[12px] font-bold py-2 px-4 rounded flex items-center justify-center gap-2 transition max-w-[150px]">
+                                        <i class="fa-solid fa-download border-b-2 border-current pb-[1px]"></i> Download .md
+                                    </button>
+                                </div>
+                                <div class="flex gap-2.5 mt-1">
+                                    <button class="flex-1 bg-[#3b3b3b] hover:bg-[#4d4d4d] border border-[#555] text-[#e5e7eb] text-[12px] font-bold py-2 rounded flex items-center justify-center gap-2 transition shadow-sm">
+                                        <i class="fa-regular fa-file-lines"></i> Copy to Obsidian
+                                    </button>
+                                    <button class="flex-1 bg-[#3b3b3b] hover:bg-[#4d4d4d] border border-[#555] text-[#e5e7eb] text-[12px] font-bold py-2 rounded flex items-center justify-center gap-2 transition shadow-sm">
+                                        <i class="fa-regular fa-clone"></i> Copy Callout
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
