@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Workfern</title>
+    <!-- FontAwesome and Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS via CDN for instant rendering -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+                sans: ['Overpass', 'sans-serif'],
+                inter: ['Inter', 'sans-serif'],
+            },
+            colors: {
+                gfnavy: '#0d223f',
+                gforange: '#f25922',
+                gflightblue: '#d7eff4',
+                gfblue: '#00afc7',
+                gftext: '#3b4351'
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Fallback compiled CSS if built later -->
+    <link href="output.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gftext font-sans antialiased overflow-x-hidden flex flex-col min-h-screen">
+
+    <!-- Navbar styling -->
+    <nav class="flex items-center justify-between px-8 lg:px-16 py-6 bg-white relative z-50">
+        <a href="index.html" class="flex items-center gap-2 cursor-pointer no-underline">
+            <div class="w-8 h-8 rounded-md bg-gforange flex items-center justify-center text-white font-bold text-xl">
+                W
+            </div>
+            <span class="text-gfnavy font-black text-2xl tracking-tight uppercase">WORKFERN</span>
+        </a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-8 py-16 lg:py-24 font-inter flex-grow w-full">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-gfnavy mb-4 tracking-tight">Privacy Policy</h1>
+        <p class="text-gray-500 mb-10 font-medium"><strong>Last Updated: April 2026</strong></p>
+        
+        <div class="space-y-8 text-gray-700 leading-relaxed text-lg">
+            <section>
+                <h3 class="text-2xl font-bold text-gfnavy mb-4">1. Introduction</h3>
+                <p>Welcome to Workfern. We respect your privacy and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website (<code>https://obsidian.workfern.com/</code>) and use our browser extensions.</p>
+            </section>
+
+            <section>
+                <h3 class="text-2xl font-bold text-gfnavy mb-4">2. Data Collection in the Browser Extension</h3>
+                <p class="mb-3">Our core philosophy is that your notes belong to you.</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li><strong>Web Annotations & Highlights:</strong> The text you highlight, annotate, and sync is processed locally and transmitted directly to your personal Obsidian vault. We do not store, read, or transmit your reading habits or annotated content to our servers.</li>
+                    <li><strong>Permissions:</strong> The extension only requests the minimum browser permissions necessary to enable highlighting on web pages and communicating with your Obsidian application.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3 class="text-2xl font-bold text-gfnavy mb-4">3. Payment and Order Processing</h3>
+                <p class="mb-3">We partner with an authorized third-party Merchant of Record (MoR) to securely handle all checkout processes, licensing, subscription management, and global tax compliance.</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>When you purchase a license, your transaction is processed securely by our designated MoR.</li>
+                    <li>Workfern does not collect, process, or store your credit card or sensitive payment information on our servers.</li>
+                    <li>Our payment partner may collect your name, email address, and billing details to process the order. Please review their specific Privacy Policy provided during the checkout process for more details.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3 class="text-2xl font-bold text-gfnavy mb-4">4. Website Analytics & Cookies</h3>
+                <p>Our website may use basic cookies to ensure the site functions properly and to track anonymous website traffic (such as page views and conversion rates) to help us improve our product.</p>
+            </section>
+
+            <section>
+                <h3 class="text-2xl font-bold text-gfnavy mb-4">5. Contact Us</h3>
+                <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:support@workfern.com" class="text-gfblue hover:underline">support@workfern.com</a>.</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer Curve -->
+    <div class="w-full bg-[#f4f7f9] pt-20 pb-10" style="border-radius: 50% 50% 0 0 / 100px 100px 0 0;">
+        <div class="max-w-4xl mx-auto text-center px-4">
+            <div class="flex items-center justify-center gap-2">
+                <div class="w-8 h-8 rounded-md bg-gforange flex items-center justify-center text-white font-bold text-xl">
+                    W
+                </div>
+                <span class="text-gfnavy font-extrabold text-xl tracking-tight">WORKFERN</span>
+            </div>
+            <p class="text-gray-400 text-sm mt-4">&copy; 2026 Workfern. All rights reserved.</p>
+            <div class="mt-8 pt-8 border-t border-gray-200 flex justify-center gap-6">
+                <a href="contact.html" class="text-gray-500 hover:text-gforange text-sm font-medium transition-colors">Contact Us</a>
+                <a href="privacy.html" class="text-gray-500 hover:text-gforange text-sm font-medium transition-colors">Privacy Policy</a>
+                <a href="terms.html" class="text-gray-500 hover:text-gforange text-sm font-medium transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

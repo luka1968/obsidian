@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Workfern</title>
+    <!-- FontAwesome and Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS via CDN for instant rendering -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+                sans: ['Overpass', 'sans-serif'],
+                inter: ['Inter', 'sans-serif'],
+            },
+            colors: {
+                gfnavy: '#0d223f',
+                gforange: '#f25922',
+                gflightblue: '#d7eff4',
+                gfblue: '#00afc7',
+                gftext: '#3b4351'
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Fallback compiled CSS if built later -->
+    <link href="output.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gftext font-sans antialiased overflow-x-hidden flex flex-col min-h-screen">
+
+    <!-- Navbar styling -->
+    <nav class="flex items-center justify-between px-8 lg:px-16 py-6 bg-white relative z-50">
+        <a href="index.html" class="flex items-center gap-2 cursor-pointer no-underline">
+            <div class="w-8 h-8 rounded-md bg-gforange flex items-center justify-center text-white font-bold text-xl">
+                W
+            </div>
+            <span class="text-gfnavy font-black text-2xl tracking-tight uppercase">WORKFERN</span>
+        </a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-8 py-16 lg:py-24 font-inter flex-grow w-full">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-gfnavy mb-4 tracking-tight">Terms of Service</h1>
+        <p class="text-gray-500 mb-10 font-medium"><strong>Last Updated: April 2026</strong></p>
+
+        <div class="space-y-8 text-gray-700 leading-relaxed text-lg">
+            <section>
+                <h3 class="text-2xl font-bold text-gfnavy mb-4">1. Agreement to Terms</h3>
+                <p>By accessing our website (<code>https://obsidian.workfern.com/</code>) or installing our browser extensions, you agree to be bound by these Terms of Service. If you disagree with any part of these terms, you may not use our services.</p>
+            </section>
+
+            <section>
+                <h3 class="text-2xl font-bold text-gfnavy mb-4">2. License and Usage</h3>
+                <p class="mb-3">Workfern (operated by Kean Xie) grants you a personal, non-exclusive, non-transferable license to use our software in accordance with the pricing plan you selected.</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>You may not reverse-engineer, decompile, or attempt to extract the source code of the extension.</li>
+                    <li>You may not resell or redistribute the software licenses.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3 class="text-2xl font-bold text-gfnavy mb-4">3. Purchases and Subscriptions</h3>
+                <p>All payments, subscriptions, and licensing are managed by our authorized third-party reseller and Merchant of Record. By purchasing our product, you also agree to the applicable terms and conditions provided by our payment partner during the checkout process.</p>
+            </section>
+
+            <section>
+                <h3 class="text-2xl font-bold text-gfnavy mb-4">4. Refunds</h3>
+                <p>We offer a 14-day money-back guarantee. If you are not satisfied with the extension, you can request a full refund within 14 days of your initial purchase by contacting our support team at <a href="mailto:support@workfern.com" class="text-gfblue hover:underline">support@workfern.com</a> or managing your order via your buyer dashboard provided by our payment partner.</p>
+            </section>
+
+            <section>
+                <h3 class="text-2xl font-bold text-gfnavy mb-4">5. Disclaimer of Warranties</h3>
+                <p>Our software is provided "as is" without any warranties, expressed or implied. We do not warrant that the software will be completely error-free or uninterrupted. Workfern is not responsible for any data loss within your Obsidian vault; please ensure you maintain regular backups of your personal data.</p>
+            </section>
+
+            <section>
+                <h3 class="text-2xl font-bold text-gfnavy mb-4">6. Limitation of Liability</h3>
+                <p>In no event shall Workfern or its developer be liable for any indirect, incidental, or consequential damages arising out of the use or inability to use the software.</p>
+            </section>
+
+            <section>
+                <h3 class="text-2xl font-bold text-gfnavy mb-4">7. Contact Information</h3>
+                <p>If you have any questions regarding these Terms, please contact <a href="mailto:support@workfern.com" class="text-gfblue hover:underline">support@workfern.com</a>.</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer Curve -->
+    <div class="w-full bg-[#f4f7f9] pt-20 pb-10" style="border-radius: 50% 50% 0 0 / 100px 100px 0 0;">
+        <div class="max-w-4xl mx-auto text-center px-4">
+            <div class="flex items-center justify-center gap-2">
+                <div class="w-8 h-8 rounded-md bg-gforange flex items-center justify-center text-white font-bold text-xl">
+                    W
+                </div>
+                <span class="text-gfnavy font-extrabold text-xl tracking-tight">WORKFERN</span>
+            </div>
+            <p class="text-gray-400 text-sm mt-4">&copy; 2026 Workfern. All rights reserved.</p>
+            <div class="mt-8 pt-8 border-t border-gray-200 flex justify-center gap-6">
+                <a href="contact.html" class="text-gray-500 hover:text-gforange text-sm font-medium transition-colors">Contact Us</a>
+                <a href="privacy.html" class="text-gray-500 hover:text-gforange text-sm font-medium transition-colors">Privacy Policy</a>
+                <a href="terms.html" class="text-gray-500 hover:text-gforange text-sm font-medium transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

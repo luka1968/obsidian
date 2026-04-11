@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Workfern</title>
+    <!-- FontAwesome and Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS via CDN for instant rendering -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+                sans: ['Overpass', 'sans-serif'],
+                inter: ['Inter', 'sans-serif'],
+            },
+            colors: {
+                gfnavy: '#0d223f',
+                gforange: '#f25922',
+                gflightblue: '#d7eff4',
+                gfblue: '#00afc7',
+                gftext: '#3b4351'
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Fallback compiled CSS if built later -->
+    <link href="output.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gftext font-sans antialiased overflow-x-hidden flex flex-col min-h-screen">
+
+    <!-- Navbar styling -->
+    <nav class="flex items-center justify-between px-8 lg:px-16 py-6 bg-white relative z-50">
+        <a href="index.html" class="flex items-center gap-2 cursor-pointer no-underline">
+            <div class="w-8 h-8 rounded-md bg-gforange flex items-center justify-center text-white font-bold text-xl">
+                W
+            </div>
+            <span class="text-gfnavy font-black text-2xl tracking-tight uppercase">WORKFERN</span>
+        </a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-8 py-16 lg:py-24 font-inter flex-grow w-full">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-gfnavy mb-6 tracking-tight">Contact Us</h1>
+        
+        <div class="space-y-8 text-gray-700 leading-relaxed text-lg">
+            <p class="font-bold text-xl text-gfnavy">Need help with the extension or your subscription? We're here for you.</p>
+
+            <section>
+                <h3 class="text-2xl font-bold text-gfnavy mb-4">Customer Support</h3>
+                <p class="mb-4">If you have any technical issues, bug reports, or feature requests regarding the Obsidian web clipper and annotation extension, please reach out to our support team. We aim to respond to all inquiries within 24-48 hours.</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li><strong>Email:</strong> <a href="mailto:support@workfern.com" class="text-gfblue hover:underline">support@workfern.com</a></li>
+                </ul>
+            </section>
+
+            <section>
+                <h3 class="text-2xl font-bold text-gfnavy mb-4">Business & Affiliate Inquiries</h3>
+                <p class="mb-4">For partnership opportunities, affiliate program details, or press inquiries, please contact:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li><strong>Email:</strong> <a href="mailto:partners@workfern.com" class="text-gfblue hover:underline">partners@workfern.com</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer Curve -->
+    <div class="w-full bg-[#f4f7f9] pt-20 pb-10" style="border-radius: 50% 50% 0 0 / 100px 100px 0 0;">
+        <div class="max-w-4xl mx-auto text-center px-4">
+            <div class="flex items-center justify-center gap-2">
+                <div class="w-8 h-8 rounded-md bg-gforange flex items-center justify-center text-white font-bold text-xl">
+                    W
+                </div>
+                <span class="text-gfnavy font-extrabold text-xl tracking-tight">WORKFERN</span>
+            </div>
+            <p class="text-gray-400 text-sm mt-4">&copy; 2026 Workfern. All rights reserved.</p>
+            <div class="mt-8 pt-8 border-t border-gray-200 flex justify-center gap-6">
+                <a href="contact.html" class="text-gray-500 hover:text-gforange text-sm font-medium transition-colors">Contact Us</a>
+                <a href="privacy.html" class="text-gray-500 hover:text-gforange text-sm font-medium transition-colors">Privacy Policy</a>
+                <a href="terms.html" class="text-gray-500 hover:text-gforange text-sm font-medium transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
