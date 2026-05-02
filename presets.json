@@ -1,0 +1,58 @@
+[
+  {
+    "id": "type-a",
+    "name": "Yelp",
+    "matchPattern": "yelp\\.com",
+    "isSpecial": true
+  },
+  {
+    "id": "type-b",
+    "name": "Google Maps",
+    "matchPattern": "google\\.[a-z.]+/maps",
+    "isSpecial": true
+  },
+  {
+    "id": "yellow-pages",
+    "name": "Yellow Pages",
+    "matchPattern": "yellowpages\\.com",
+    "containerSelector": ".result, .search-results .srp-listing",
+    "nameSelector": ".business-name span, .n a span, a.business-name",
+    "linkSelector": "a.track-visit-website, a[class*=\"website\"]",
+    "linkAttribute": "href",
+    "needsUrlDecode": false,
+    "urlParam": null
+  },
+  {
+    "id": "bbb",
+    "name": "Better Business Bureau",
+    "matchPattern": "bbb\\.org",
+    "containerSelector": ".MuiGrid-item, .result-item",
+    "nameSelector": "a[class*=\"business-name\"], h3 a, .result-name a",
+    "linkSelector": "a[href*=\"bbb.org/us/\"]",
+    "linkAttribute": "href",
+    "needsUrlDecode": false,
+    "urlParam": null
+  },
+  {
+    "id": "trustpilot",
+    "name": "Trustpilot",
+    "matchPattern": "trustpilot\\.com",
+    "containerSelector": "div[class*=\"businessUnitResult\"], a[name=\"business-unit-card\"]",
+    "nameSelector": "p[class*=\"displayName\"], .business-unit-card-title",
+    "linkSelector": "a[href*=\"/review/\"]",
+    "linkAttribute": "href",
+    "needsUrlDecode": false,
+    "urlParam": null
+  },
+  {
+    "id": "clutch",
+    "name": "Clutch.co",
+    "matchPattern": "clutch\\.co",
+    "containerSelector": ".provider-row, li[class*=\"provider\"]",
+    "nameSelector": "h3.company_info a, a.company_name",
+    "linkSelector": "a.website-link__item, a[href*=\"website_clicked\"]",
+    "linkAttribute": "href",
+    "needsUrlDecode": false,
+    "urlParam": null
+  }
+]
